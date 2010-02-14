@@ -1,5 +1,6 @@
 build/*.dsc
 build/*source.changes
 build/*amd64.changes
+build/*.upload
 *tar.gz
 *deb

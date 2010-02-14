@@ -1,6 +1,5 @@
 # This Makefile is part of build_stuff
-#
-
+# (C) 2010 Michael Pilgermann <kichkasch@gmx.de>
 
 # for UBUNTU Launchpad upload of deb package
 # Packager information
@@ -17,7 +16,6 @@ PYRTM_VERSION="0.2"
 PYRTM_BUILD_VERSION="0ubuntu1"
 PYRTM_SRC=pyrtm-$(PYRTM_VERSION).tar.gz
 PYRTM_URL=http://pypi.python.org/packages/source/p/pyrtm/$(PYRTM_SRC)
-
 
 pyrtm:
 	$(call python_packager,$(PYRTM_PACKAGE_NAME),$(PYRTM_VERSION),$(PYRTM_BUILD_VERSION),$(PYRTM_SRC),$(PYRTM_URL))
@@ -51,9 +49,9 @@ sdist_ubuntu = \
 	(cd build/$(1)-$(2)/ && dpkg-buildpackage -S -k$(PGP_KEYID))
 	
 ppa_upload = \
-	(cd build/ && dput --config dput.config  kichkasch-ppa $(1)_$(2)-$(3)_source.changes)
+	(cd build/ && dput --config dput.config  kichkasch-thirdparty $(1)_$(2)-$(3)_source.changes)
 
 clean = \
 	echo "Cleaning up ..."; \
-	rm -rf tmp/
+	rm -rf tmp/; \
 	rm -rf build/$(1)-$(2)/
