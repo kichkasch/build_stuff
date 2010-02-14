@@ -1,0 +1,9 @@
+pyrtm (0.2-0ubuntu1) karmic; urgency=low
+
+  * app.py: Fix for unreliable type of 'taskseries' (#5)
+  * rtm.py: Fixed incorrect number of arguments to "lists" (#3)
+  * rtm.py: Try to import django.utils.simplejson before falling back
+  * app.py: Made it a command-line app accepting key/secret/token as args
+
+ -- Sridhar Ratnakumar <srid at nearfar.org>  Tue, 08 Dec 2009 13:43:12 +0100
+
